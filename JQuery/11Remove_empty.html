@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove and empty methods</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 
+        remove()= remove selected and child elements
+        empty()= remove child of selected elements
+     -->
+    <div id="div1">
+        <p>this is paragraph</p>
+        <p>this is paragraph</p>
+        <p>this is paragraph</p>
+        <p class="para">this is paragraph</p>
+        <p class="para">this is paragraph</p>
+    </div>
+    <button id="btn1">remove div</button>
+    <button id="btn2">empty div</button>
+    <button id="btn3">remove para</button>
+    <script>
+        $(document).ready(function () {
+            $("#div1").css({ "background-color": "skyblue", "width": "200px", "height": "300px" });
+            $("#btn1").click(function () {
+                $("#div1").remove();
+            })
+            $("#btn2").click(function () {
+                $("#div1").empty();
+            })
+            $("#btn3").click(function () {
+                $("p").remove(".para");
+            })
+        })
+
+    </script>
+</body>
+
+</html>

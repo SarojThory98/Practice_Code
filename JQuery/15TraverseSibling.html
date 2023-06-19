@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery traversing of siblings</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <style>
+        .divison {
+            /* color: lightgray; */
+            border: 2px solid lightgray;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        There are many useful jQuery methods for traversing sideways in the DOM tree:
+        There are many useful jQuery methods for traversing sideways in the DOM tree:
+         siblings()
+         next()
+         nextAll()
+         nextUntil()
+         prev()
+         prevAll()
+         prevUntil()
+     -->
+
+    <div class="division">
+        div element
+        <h2>h2</h2>
+        <span>span</span>
+        <p>p</p>
+        <p>p</p>
+        <p>p</p>
+        <h4>h4</h4>
+        <h3>h3</h3>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            //siblings()
+            // $("h2").siblings("p").css({"color":"blue", "border":"2px solid blue"})
+
+            //next()
+            //$("h2").next().css({"color":"blue", "border":"2px solid blue"})
+
+            //nextAll()
+            // $("h2").nextAll().css({"color":"blue", "border":"2px solid blue"})
+
+            //nextUntil()
+            //    $("h2").nextUntil("h4").css({"color":"blue", "border":"2px solid blue"})
+
+            //prev()
+            //    $("h4").prev().css({"color":"blue", "border":"2px solid blue"})
+
+            //prevAll()
+            //    $("h4").prevAll().css({"color":"blue", "border":"2px solid blue"})
+
+            //prevUntil()
+            $("h3").prevUntil("span").css({ "color": "blue", "border": "2px solid blue" })
+        }) 
+    </script>
+
+
+    <!-- jQury filtring -->
+    <div class="divclass divison" style="border:2px solid black">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolores!
+            </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, consequuntur.</p>
+        </div>
+        <div class="divison">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolores!
+            </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, consequuntur.</p>
+        </div>
+        <div class="divison">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dolores!
+            </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, consequuntur.</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            //first()
+            // $(".divclass").first().css({"background-color":"yellow"})
+            //$("div").first().css({"background-color":"yellow"})
+
+            //last()
+            // $("div").last().css({"background-color":"yellow"})
+
+            //eq() method
+            // $("p").eq(1).css("background-color","skyblue")
+
+            //filter() method
+            // $("div").filter(".divison").css("background-color","skyblue");
+
+            //not() method
+            $("div").not(".divison").css("background-color", "skyblue");
+        });
+    </script>
+</body>
+
+</html>

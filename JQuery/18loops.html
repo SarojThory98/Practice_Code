@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery loops</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+
+    
+    <script>
+        let arr=['one','two','three','four'];
+        let obj={"key1":1,"key2":2,"key3":3};
+        $(document).ready(function(){
+            //each()
+            $("div").each(function(index){
+                console.log(`div${index}: ${this.id}`);
+            })
+            $(arr).each(function(index, value){
+                console.log(`arr${index}: ${value}`)
+            });
+            $.each(obj,function(key, value){
+                console.log(`obj-${key}: ${value}`)
+            });
+
+            //for
+            for(let i=0;i<10;i++){
+                console.log(i);
+            }
+        })
+    </script>
+</body>
+</html>

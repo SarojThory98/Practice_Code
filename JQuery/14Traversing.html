@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery traversing</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <style>
+        .elementStyle {
+            border: 2px solid lightgrey;
+            color: lightgray;
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- first div -->
+    <div class="elementStyle" style="width: 600px;">div (great-granndparent)
+        <ul class="elementStyle" style="width: 500px;">ul (grandparent)
+            <li class="elementStyle">li (direct parent)
+                <br>
+                <p id="para1" class="elementStyle">span tag</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- second  div -->
+    <div class="elementStyle" style="width: 600px;">div (great-granndparent)
+        <ul class="elementStyle" style="width: 500px;">ul (grandparent)
+            <li class="elementStyle">li (direct parent)
+                <br>
+                <p id="para2" class="elementStyle">span tag</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- third  div -->
+    <div class="elementStyle" style="width: 600px;">div (great-granndparent)
+        <ul class="elementStyle" style="width: 500px;">ul (grandparent)
+            <li class="elementStyle">li (direct parent)
+                <br>
+                <p id="para3" class="elementStyle">span tag</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- fourth  div -->
+    <div id="para4" class="elementStyle" style="width: 600px;">div (great-granndparent)
+        <ul class="elementStyle" style="width: 500px;">ul (grandparent)
+            <li class="elementStyle">li (direct parent)
+                <br>
+                <p class="elementStyle">span tag</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- fifth  div -->
+    <div class="elementStyle" style="width: 600px;">div (great-granndparent)
+        <ul id="para5" class="elementStyle" style="width: 500px;">ul (grandparent)
+            <li class="elementStyle">li (direct parent)
+                <br>
+                <p class="elementStyle">span tag</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            //parent()
+            $("#para1").parent().css({ "color": "blue", "border": "2px solid blue" })
+
+            //parents()
+            $("#para2").parents().css({ "color": "blue", "border": "2px solid blue" })
+
+            //parentsUntil()
+            $("#para3").parentsUntil("div").css({ "color": "blue", "border": "2px solid blue" })
+
+            //children()
+            $("#para4").children().css({ "color": "blue", "border": "2px solid blue" })
+
+            //find()
+            $("#para5").find("li").css({ "color": "blue", "border": "2px solid blue" })
+        })
+    </script>
+</body>
+
+</html>

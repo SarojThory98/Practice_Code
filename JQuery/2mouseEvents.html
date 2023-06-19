@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="box">
+        <h2 id="heading">this is heading</h2>
+        <p id="para1">Lorem adipisicing elit. Fugit, eum? Ab ex aliquid expedita est recusandae maxime reprehenderit
+            accusamus repellendus!</p>
+        <p id="para2">second paragraph</p>
+        text: <input type="text">
+    </div>
+    <script>
+        // click	keypress submit	load dblclick keydown change resize
+        //mouseenter keyup focus scroll mouseleave blur	unload
+
+        $(document).ready(function () {
+            $(".box").css({ "background-color": "yellow", "border": "2px solid black" });
+
+            // //on click
+            $("#heading").click(function () {
+                // $("#heading").css("background-color","blue");
+                $(this).hide();
+            })
+
+            //on double click
+            $(".box").dblclick(function () {
+                $("#para1").css("background-color", "green");
+            })
+            $("#para2").contextmenu(function () {
+                $("#para2").css("background-color", "red");
+            })
+            // other events: mouseenter, mouseleave
+
+            //hover
+            $(".box").hover(function () {
+                alert("enter");
+            },
+                function () {
+                    alert("leave");
+                }
+            )
+
+            //focus
+            $("input").focus(function () {
+                $(this).css("background-color", "brown");
+            })
+        })
+    </script>
+</body>
+
+</html>

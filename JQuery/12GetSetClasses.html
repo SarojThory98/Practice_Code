@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get and set classes</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>this is heading</h1>
+    <div class="color">this is div element</div>
+    <p>this is paragraph element</p>
+    <button id="btn1">click</button>
+    <button id="btn2">click</button>
+    <style>
+        .head {
+            background-color: yellow;
+            color: skyblue;
+        }
+
+        .para {
+            background-color: brown;
+        }
+
+        .color {
+            color: blueviolet;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                // addClass()
+                $("h1, p").addClass("head");
+                $("div").addClass("para");
+
+                // removeClass()
+                $("div").removeClass("color");
+
+
+            })
+
+            //toggleClass()
+            $("#btn2").click(function () {
+                $("h1, p").toggleClass('head');
+            })
+        })
+    </script>
+</body>
+
+</html>

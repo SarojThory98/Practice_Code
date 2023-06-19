@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- append() method -->
+    <p>this is first paragraph</p>
+    <p>this is second paragraph</p>
+    <ol id="olist">
+        <li>first list</li>
+        <li>second list</li>
+        <li>third list</li>
+        <li>fourth list</li>
+    </ol>
+    <button id="btn1">append text</button>
+    <button id="btn2">append list item</button>
+    <script>
+        //add new html content
+        //apppend(), prepend(), after(), before()
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").append(" append text");
+            })
+            $("#btn2").click(function () {
+                $("#olist").append("<li>fifth list</li>");
+            })
+        })
+    </script>
+
+    <!-- prepend() method -->
+    <br>
+    <br>
+    <div>this is first paragraph</div>
+    <div>this is second paragraph</div>
+    <ol id="olist1">
+        <li>first list</li>
+        <li>second list</li>
+        <li>third list</li>
+        <li>fourth list</li>
+    </ol>
+    <button id="btn3">prepand text</button>
+    <button id="btn4">prepand list item</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn3").click(function () {
+                $("div").prepend("prepand text ");
+            })
+            $("#btn4").click(function () {
+                $("#olist1").prepend("<li>fifth list</li>");
+            })
+        })
+    </script>
+
+    <!-- after() method -->
+    <br>
+    <br>
+    <p id="para1">this is first paragraph</p>
+
+    <ol id="olist2">
+        <li>first list</li>
+        <li>second list</li>
+        <li>third list</li>
+        <li>fourth list</li>
+    </ol>
+    <button id="btn5">after text</button>
+    <button id="btn6">after list item</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn5").click(function () {
+                $("#para1").after("after text ");
+            })
+            $("#btn6").click(function () {
+                $("#olist2").after("<li>fifth list</li>");
+            })
+        })
+    </script>
+
+    <!-- before() method -->
+    <br>
+    <br>
+    <p id="para2">this is first paragraph</p>
+
+    <ol id="olist3">
+        <li>first list</li>
+        <li>second list</li>
+        <li>third list</li>
+        <li>fourth list</li>
+    </ol>
+    <button id="btn7">before text</button>
+    <button id="btn8">before list item</button>
+    <script>
+        $(document).ready(function () {
+            $("#btn7").click(function () {
+                $("#para2").before("before text ");
+            })
+            $("#btn8").click(function () {
+                $("#olist3").before("<li>fifth list</li>");
+            })
+        })
+    </script>
+</body>
+
+</html>

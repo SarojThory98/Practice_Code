@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Dimensions</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="div1"></div>
+  <button id="btn1">click</button>
+  <style>
+    #div1 {
+      width: 200px;
+      height: 250px;
+      padding: 15px;
+      border: 10px solid black;
+      margin: 20px;
+    }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("#btn1").click(function () {
+        let text = "";
+
+        //width()
+        text += "width of div: " + $("#div1").width() + "<br>";
+
+        //height()
+        text += "height of div: " + $("#div1").height() + "<br>";
+
+        //innerwidth()
+        text += "innerwidth of div: " + $("#div1").innerWidth() + "<br>";
+
+        //innerheight()
+        text += "innerheight of div: " + $("#div1").innerHeight() + "<br>";
+
+        //outerwidth()
+        text += "outerwidth of div: " + $("#div1").outerWidth() + "<br>";
+
+        //outerheight()
+        text += "outerheight of div: " + $("#div1").outerHeight() + "<br>";
+
+        //innerwidth(true)
+        text += "innerwidth(true) of div: " + $("#div1").innerWidth(true) + "<br>";
+
+        //innerheight(true)
+        text += "innerheight(true) of div: " + $("#div1").innerHeight(true) + "<br>";
+        $("#div1").html(text);
+      })
+
+    })
+  </script>
+</body>
+
+</html>

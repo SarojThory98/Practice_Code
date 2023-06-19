@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery misc</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 
+        jQuery noConflict()
+     -->
+    <!-- <p id="para1">this is the paragraph</p>
+     <button id="btn1">click me</button> -->
+
+    <!-- <script>
+        $.noConflict();
+        jQuery(document).ready(function(){
+           jQuery("#btn1").click(function(){
+            jQuery("#para1").text("this is jQuery paragraph");
+           })
+        })
+     </script> -->
+
+    <!-- <p id="para2">this is the paragraph</p>
+      <button id="btn2">click me</button>
+     <script>
+        var jq=$.noConflict();
+        jq(document).ready(function(){
+        //userdefined name
+        console.log(jq);
+        jq("#btn2").click(function(){
+         jq("#para2").text("this is jQuery paragraph");
+        })
+    
+        })
+     </script> -->
+
+
+    <p id="para3">this is the paragraph</p>
+    <button id="btn3">click me</button>
+    <script>
+        var jq = $.noConflict();
+        jq(document).ready(function ($) {
+            console.log(jq);
+            $("#btn3").click(function () {
+                $("#para3").text("this is jQuery paragraph");
+            })
+
+        })
+    </script>
+</body>
+
+</html>

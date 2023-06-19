@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ea fugit temporibus, consectetur
+      blanditiis qui laborum itaque labore vitae perferendis!</p>
+   <button type="button" id="bShow">show</button>
+   <button type="button" id="bHide">hide</button>
+   <button type="button" id="timeBshow">show(time)</button>
+   <button type="button" id="timeBhide">hide(time)</button>
+   <button type="button" id="funBshow">show(function)</button>
+   <button type="button" id="funBhide">hide(function)</button>
+   <script>
+      $(document).ready(function () {
+         $("#bShow").click(function () {
+            $("#para").show();
+         })
+         $("#bHide").click(function () {
+            $("#para").hide();
+         })
+
+         //show button with time
+         $("#timeBshow").click(function () {
+            $("#para").show(1000);
+         })
+         $("#timeBhide").click(function () {
+            $("#para").hide(1000);
+         })
+         //show button with callback function
+         $("#funBshow").click(function () {
+            $("#para").show();
+         })
+         $("#funBhide").click(function () {
+            $("#para").hide(function () {
+               alert("callback function");
+            });
+         })
+      })
+
+   </script>
+</body>
+
+</html>

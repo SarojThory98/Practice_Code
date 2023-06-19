@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <p id="firstpara" class="spanclass">Lorem ipsum dolor sit,<span> amet consectetur adipisicing</span> elit. Error,
+    fugit.</p>
+  <!-- <div class="sform">
+    name: <input type="text" id="name">
+    <br>
+    email: <input type="email" id="email">
+    <br>
+    <button type="submit">submit</button>
+  </div> -->
+  <script>
+    // get methods
+    //text(), html(), attr(), val()
+    $(document).ready(function () {
+      let para1 = $("#firstpara").text();
+      console.log(para1);
+      let para2 = $("#firstpara").html();
+      console.log(para2);
+      //   let para3=$("#firstpara").attr();
+      //   console.log(para3);
+
+      //set methods
+      let para4 = $("#firstpara").text("hello world");
+      console.log(para4);
+    })
+
+  </script>
+</body>
+
+</html>
