@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        function myFun() {
+            document.write("<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium,</p><br><br><br>");
+        }
+        myFun();
+        myFun();
+        myFun();
+        myFun();
+
+        /* functions with arguments */
+        function peraFun(fname, lname) {
+            document.write("hello " + fname + " " + lname + "<br>");
+        }
+        peraFun("saroj", "thory");
+        peraFun("thory");
+        peraFun("saroj");
+
+        //default value in function
+        function defFun(fname = "saroj", lname = "thory") {
+            console.log(lname, fname);
+            document.write("hello " + fname + " " + lname + "<br>");
+        }
+        defFun("asdf", "sdfsd");
+        defFun();
+        defFun(lname = "asdf");
+        defFun(fname = "asdf");
+
+        name = "saroj";
+        document.write(name, '<br>');
+
+        {
+            console.log(name);
+        }
+
+        //return type function
+        function returnTypeFun(val1, val2) {
+            var val3 = val1 + val2;
+            return val3;
+        }
+        var sum = returnTypeFun(2, 3);
+        document.write(sum);
+        document.getElementById("demo").innerHTML = "sum is " + sum + " sum";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comparison operator</title>
+</head>
+
+<body>
+    <script>
+        var a = 23, b = 20;
+        var c = 2, d = 2;
+        var e = 'str1', f = 'str2';
+        var g = 'str', h = 'str';
+        var i = '3', j = 3;
+
+        //== operator
+        document.write(a == b, '<br>');
+        document.write(c == d, '<br>');
+        document.write(e == f, '<br>');
+        document.write(g == h, '<br>');
+        document.write(i == j, '<br>');
+
+        //=== operator
+        document.write(a === b, '<br>');
+        document.write(c === d, '<br>');
+        document.write(i === j, '<br>');
+
+        //!= operator
+        document.write(a != b, '<br>');
+        document.write(c != d, '<br>');
+        document.write(i != j, '<br>');
+
+        //!== operator
+        document.write(i !== j, '<br>');
+
+        //if-else
+        var male = 2;
+        var gender = 3;
+        if (gender == 2) {
+            document.write("hello mr.");
+        }
+        else {
+            document.write("hello ms.");
+        }
+
+
+    </script>
+</body>
+
+</html>

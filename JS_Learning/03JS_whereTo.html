@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script where to</title>
+    <style>
+
+    </style>
+    <script>
+        function myfun() {
+            document.getElementById("headJs").innerHTML = "paragraph changed";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <p id="pera">this is the java script where to file</p>
+    </div>
+    <script>
+        document.getElementById("pera").innerHTML = "my first script";
+    </script>
+
+    <!-- js in head -->
+    <div class="container">
+        <p id="headJs">start peragraph</p>
+        <button type="button" onclick="myfun()">btn</button>
+    </div>
+
+</body>
+
+</html>

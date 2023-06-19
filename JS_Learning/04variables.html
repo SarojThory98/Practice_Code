@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>variables</title>
+</head>
+
+<body>
+  <p id="demo"></p>
+  <script>
+    // four types of variables in JS
+    /*
+    1. var
+    2. let
+    3. const
+    4. using notnig
+    */
+
+    //var variable
+
+    var a = "saroj thory";
+    document.write(a, "<br>");
+
+
+    var b = "saroj  thory";
+    document.write(b, "<br>");
+
+
+    var c = 20;
+    document.write(`<p> ${c} </p>`);
+
+
+    var d = 20.502
+    document.write(d, "<br>");
+
+
+    var first, second;
+    first = 5;
+    second = 6;
+    document.write(first, "<br>");
+    document.write(second, "<br>");
+
+
+    first = second = 2;
+    document.write(first, "<br>");
+    document.write(second, "<br>");
+
+    var x = 10;
+    var x = 244.90
+    document.write(x, "<br>"); //no error
+
+    {
+      var a2 = 3;
+    }
+    document.write(a2, "<br>");
+
+    var a3 = 5;
+    {
+      var a3 = 6;
+    }
+    document.write(a3, "<br>");
+
+
+    //let variable
+    /*  let y=10;
+      let y=244.90
+      document.write(y,"<br>"); //error  */
+
+    let z = 10;
+    z = 15;
+    document.write(z, "<br>"); //we can override value
+
+    /* {
+     let a1=34;
+     }
+     document.write(a1,"<br>");*/
+    /*
+      1. Variables defined with let cannot be Redeclared.
+      2. Variables defined with let must be Declared before use.
+      3. Variables defined with let have Block Scope.
+      4. both let and const are block element.
+      */
+
+    let a4 = 2;
+    {
+      let a4 = 3;
+    }
+    document.write(a4, "<br>"); //we can't declare same variable in one block
+
+    //const variable
+    /* 
+     const v1=56;
+     const v1=10; //error
+     */
+    /* const v1=10;
+    v1=20; //error
+    */
+    const v1 = 30;
+    document.write(v1, "<br>");
+
+    /*const s3;
+    s3=5;  //JavaScript const variables must be assigned a value when they are declared
+    */
+
+    const array1 = { num1: "value1", num2: "value2", num3: "value3" };
+    document.write(array1, "<br>");
+    array1.num1 = "val1";
+    console.table(array1);
+
+    // using nothing
+    x1 = 5;
+    x2 = 6;
+    x3 = x1 + x2;
+    document.write(x3 + "<br>");
+
+    //undefined value
+    var y1;
+    document.getElementById("demo").innerHTML = y1;
+    //  document.write(y1); 
+
+    //re-declaring variables
+    var z1 = "saroj";
+    var z1;
+    document.write(z1, "<br>");
+
+    //js arithmetic
+    var t1 = "2" + 3 + 4;
+    document.write(t1, "<br>"); //if you put a number in quotes then the rest of numbers treated as a string.
+
+    var t2 = 3 + 4 + "5";
+    document.write(t2, "<br>");
+
+    var t3 = 3 + "4" + 5;
+    document.write(t3, "<br>");
+
+    //dollar and _ sign treated as a letter in JS
+
+
+    //hoisting
+    s1 = 24;
+    var s1;
+    document.write(s1, "<br>");
+
+     //let hoisting
+    /*
+    s2=20;
+    let s2;
+    document.write(s2,"<br>");  //gives reference error
+    */
+
+  </script>
+</body>
+
+</html>

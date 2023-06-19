@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Introduction</title>
+
+    <!-- style tag -->
+    <style>
+        .container {
+            border: 2px solid black;
+            margin-bottom: 10px;
+            background-color: gainsboro;
+            width: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="pera">This is java script code</p>
+        <button type="button" onclick='document.getElementById("pera").innerHTML="hello world"'>click me</button>
+    </div>
+    <div class="container">
+        <button type="button" onclick="document.getElementById('on_off_blub').src='/on_blub.jpeg'">Turn On</button>
+        <img id="on_off_blub" src="/off_blub.jpeg">
+        <button type="button" onclick="document.getElementById('on_off_blub').src='/off_blub.jpeg'">Turn Off</button>
+    </div>
+
+    <!-- change HTML styles -->
+    <!-- change display -->
+    <div class="container">
+        <p id="cssElem">This is java script code</p>
+        <button type="button" onclick='document.getElementById("cssElem").style.fontSize="36px"'>click me</button>
+    </div>
+    <!-- change font size -->
+    <div class="container">
+        <p id="hide_showElem">This is java script code</p>
+        <button type="button" onclick='document.getElementById("hide_showElem").style.display="none"'>Hide</button>
+        <button type="button" onclick='document.getElementById("hide_showElem").style.display="block"'>Show</button>
+    </div>
+</body>
+
+</html>

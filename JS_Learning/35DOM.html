@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo1"></p>
+    <p id="demo11">this is the paragraph</p>
+    <p class="demo2">12345678</p>
+    <p class="demo2">asdfghj</p>
+    <p id="demo3"></p>
+    <div id="pera">
+        <p></p>
+        <p>wertyuiozxcvbnm,dfghj</p>
+    </div>
+    <!-- by id -->
+    <button type="button" onclick="document.getElementById
+('demo1').innerHTML='hello world'">cilck me</button>
+
+    <!-- by class name-->
+    <button type="button" onclick="document.getElementsByClassName
+('demo2')[1].innerHTML='hello world'">cilck me</button>
+
+    <!-- by tag name-->
+    <button type="button" onclick="document.getElementsByTagName
+('p')[2].innerHTML='hello world'">cilck me</button>
+    <script>
+        const idvar = document.getElementById('demo11');
+        document.write(idvar);
+        let vals = document.getElementsByTagName("p");
+        console.log(vals);
+        let pera1 = document.getElementById('pera');
+        let pera2 = pera1.getElementsByTagName('p')[1];
+        console.log(pera2);
+
+        let selector1 = document.querySelectorAll('p.demo2');
+        console.log(selector1);
+
+        //dynamic content
+        document.getElementById('demo3').innerHTML = 'date:' + Date();
+
+
+    </script>
+</body>
+
+</html>

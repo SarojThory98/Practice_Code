@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt box</title>
+</head>
+
+<body>
+    <script>
+        //alert syntax
+        prompt("enter your name");
+
+        //store prompt value in variable
+        var a = prompt("enter your name");
+        alert(a);
+
+        var v1 = prompt("enter your marks:");
+        if (v1 > 90 && v1 <= 100)
+            document.write("congrats! you are in merit");
+        else if (v1 >= 60 && v1 <= 90)
+            document.write("you are in 1st divison");
+        else if (v1 >= 33 && v1 < 60)
+            document.write("you are in 3rd divison");
+        else
+            document.write("sorry, you are fail");
+    </script>
+</body>
+
+</html>

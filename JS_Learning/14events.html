@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .peragraph {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- onclick -->
+    <p class="peragraph">
+    <h4>on click</h4>
+    <button onclick="hello()">click me</button>
+    </p>
+
+    <!-- double click -->
+    <p class="peragraph">
+    <h4>double click</h4>
+    <button ondblclick="hello()">click me</button>
+    </p>
+
+    <!-- on right click -->
+    <p class="peragraph">
+    <h4>right click</h4>
+    <button oncontextmenu="hello()">click me</button>
+    </p>
+
+    <!-- on mouse hover -->
+    <p class="peragraph">
+    <h4>mouse hover</h4>
+    <button onmouseenter="hello()">click me</button>
+    </p>
+
+    <!-- on mouse out -->
+    <p class="peragraph">
+    <h4>mouse out</h4>
+    <button onmouseout="hello()">click me</button>
+    </p>
+
+    <!-- on mouse down -->
+    <p class="peragraph">
+    <h4>mouse down</h4>
+    <button onmousedown="hello()">click me</button>
+    </p>
+
+    <!-- on mouse up -->
+    <p class="peragraph">
+    <h4>mouse up</h4>
+    <button onmouseup="hello()">click me</button>
+    </p>
+
+    <!-- on key press -->
+    <p class="peragraph">
+    <h4>key press</h4>
+    <button onkeypress="hello()">click me</button>
+    </p>
+
+    <!-- on key up -->
+    <p class="peragraph">
+    <h4>key up</h4>
+    <button onkeyup="hello()">click me</button>
+    </p>
+
+    <!-- on load -->
+    <p class="peragraph">
+    <h4>load</h4>
+    <button onload="hello()">click me</button>
+    </p>
+
+    <!-- on resize -->
+    <p class="peragraph">
+    <h4>resize</h4>
+    <button onresize="hello()">click me</button>
+    </p>
+
+    <!-- on scroll -->
+    <p class="peragraph">
+    <h4>scroll</h4>
+    <button onscroll="hello()">click me</button>
+    </p>
+    <script>
+        function hello() {
+            alert("hello everone");
+        }
+    </script>
+
+
+    <p id="demo"></p>
+    <br>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">date-time(changes paragraph content)</button>
+
+
+    <!-- the code changes the content of its own element (using this.innerHTML) -->
+    <p> <button onclick="this.innerHTML=Date()">
+            date-time(changes button content)</button>
+    </p>
+
+</body>
+
+</html>
